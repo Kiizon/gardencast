@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ethereal-blue: #6b9eca;
+  --color-sea-jet: #5c9ead;
+  --color-nile-green: #a0c49d;
+  --color-muted-lime: #d0d080;
+  --color-wet-weather: #909090;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Pixelify Sans', monospace;
+  image-rendering: pixelated;
+  background: #0f172a;
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+.font-pixel {
+  font-family: 'Pixelify Sans', monospace;
+  image-rendering: pixelated;
+  letter-spacing: 0.03em;
+}
+
+/* Glassmorphism panel styles */
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #0f172a;
+}
+
+.glass-panel-dark {
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+}
+
+/* Custom scrollbar for horizontal lists */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.3);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.5);
+}
+
+/* Keyframe animations for drifting clouds */
+@keyframes floatCloud {
+  0% {
+    transform: translateX(-200px);
+  }
+
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+.animate-cloud-slow {
+  animation: floatCloud 60s linear infinite;
+}
+
+.animate-cloud-medium {
+  animation: floatCloud 40s linear infinite;
+}
+
+.animate-cloud-fast {
+  animation: floatCloud 25s linear infinite;
+}
